@@ -6,6 +6,13 @@ terraform {
     }
   }
   required_version = ">= 1.0"
+
+  cloud {
+    organization = "deep-coast-eng"
+    workspaces {
+      name = "okta-dev"
+    }
+  }
 }
 
 provider "okta" {
